@@ -1,8 +1,8 @@
 FROM jonakarl/base
 
 
-WORKDIR /opt/monroe/
-RUN npm install 
+#WORKDIR /opt/monroe/
+#RUN npm install 
 
 COPY files/browsertime-master /opt/monroe/
 COPY files/browsertime-master/browsersupport/ /opt/monroe/basic_browser_repo

@@ -317,6 +317,16 @@ class SeleniumRunner {
    * @throws {BrowserError}
    */
   async stop() {
+    var glob=require("glob");
+    var fs=require("fs");
+    glob("/tmp/rust_mozprofile*", function(er, files) {
+		console.log(files[0]);
+	        if (fs.existsSync(files[0])){
+			fs.rename(files[0],'/opt/monroe/profile_moz', function(err){
+				if (err) console.log("Error: "+ err);
+				});
+		}	
+    });
     if (this.driver) {
       log.debug('Telling browser to quit.');
       try {

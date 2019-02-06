@@ -1,4 +1,4 @@
-FROM jonakarl/base
+FROM monroe/base:web
 
 
 #WORKDIR /opt/monroe/

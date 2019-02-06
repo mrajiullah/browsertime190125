@@ -1,0 +1,3 @@
+cat 240_MONROE.EXP.HEADLESS.BROWSERTIME_1_1549297492.21.json |jq .har.PageSize,.har.NumObjects,.url|tr '\n' ' '
+
+for i in *.json; do cat $i|jq .url,.har.NumObjects,.har.PageSize,.browser,.protocol,.pageLoadTime|tr '\n' ' ';echo;done

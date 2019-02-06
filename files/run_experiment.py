@@ -175,7 +175,7 @@ def browse_firefox(iface,url,getter_version):
 			shutil.rmtree(common_cache_folder)
 		except:
 			print "Exception ",str(sys.exc_info())
-        #print os.listdir("browsersupport/firefox-profile")
+        print os.listdir("browsersupport/firefox-profile")
 	try:
 		if getter_version == 'HTTP1.1/TLS':
 			cmd=['bin/browsertime.js','-b',"firefox","https://"+str(url), 

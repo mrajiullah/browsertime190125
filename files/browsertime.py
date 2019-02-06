@@ -608,7 +608,7 @@ if __name__ == '__main__':
 						continue
                                         elif browser == "chrome" and protocol == "quic" and (url not in quic_urls and url !="www.youtube.com/watch?v=544vEgMiMG0"):
                                                 continue
-                                        elif protocol != "quic" and url in quic_urls:
+                                        elif protocol != "quic" and browser == "firefox" and url in quic_urls:
                                             continue
 					for run in range(start_count, iterations):
 						# Create a experiment process and start it

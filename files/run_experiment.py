@@ -81,14 +81,14 @@ def browse_chrome(iface,url,getter_version):
 				'-n','1','--resultDir','web-res',
 				'--chrome.args', 'no-sandbox','--chrome.args', 'disable-http2',  
 				'--chrome.args', 'user-data-dir=/opt/monroe/'+folder_name+"/",
-				'--userAgent', '"Mozilla/5.0 (Linux; Android 8.0.0; SM-G950F Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81  Mobile Safari/537.36"']
+				'--userAgent', '"Mozilla/5.0 (Linux; Android 8.0.0; SM-G950F Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98  Mobile Safari/537.36"']
 			#output=check_output(cmd)
 			output=check_output(" ".join(cmd), shell=True)
 		elif getter_version=="HTTP2":
 			cmd=['bin/browsertime.js',"https://"+str(url), 
 				'-n','1','--resultDir','web-res',
 				'--chrome.args', 'no-sandbox','--chrome.args', 'user-data-dir=/opt/monroe/'+folder_name+"/",
-				'--userAgent', '"Mozilla/5.0 (Linux; Android 8.0.0; SM-G950F Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81  Mobile Safari/537.36"']
+				'--userAgent', '"Mozilla/5.0 (Linux; Android 8.0.0; SM-G950F Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98  Mobile Safari/537.36"']
 			#output=check_output(cmd)
 			output=check_output(" ".join(cmd), shell=True)
 		elif getter_version=="QUIC":
@@ -96,7 +96,7 @@ def browse_chrome(iface,url,getter_version):
 				'-n','1','--resultDir','web-res',
 				'--chrome.args','enable-quic',
 				'--chrome.args', 'no-sandbox','--chrome.args', 'user-data-dir=/opt/monroe/'+folder_name+"/",
-				'--userAgent', '"Mozilla/5.0 (Linux; Android 8.0.0; SM-G950F Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81  Mobile Safari/537.36"']
+				'--userAgent', '"Mozilla/5.0 (Linux; Android 8.0.0; SM-G950F Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98  Mobile Safari/537.36"']
 			output=check_output(" ".join(cmd), shell=True)
                 print "Processing the HAR files ..."
 		har={}
